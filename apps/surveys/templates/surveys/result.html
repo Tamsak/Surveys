@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Survey Form</title>
+    <title>Submitted Form</title>
 </head>
 <body>
     {% load static %}
     <link rel="stylesheet" href="{% static 'surveys/style.css' %}">
+    Thank for submitting this form! You have submitted it {{request.session.counter}} times now.
     <fieldset>
         Name: {{name}}
         Dojo Location: {{location}}
