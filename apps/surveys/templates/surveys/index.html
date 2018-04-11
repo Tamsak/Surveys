@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey Form</title>
+</head>
+<body>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'surveys/style.css' %}">
+    <form action = "/process" method="post">
+        {% csrf_token %}
+        <fieldset>
+            Your Name:<input type='text' name='name' class='input'> 
+            Dojo Location:        
+            <select name='location'class='input2'>
+                <option value='seattle'>Seattle</option>
+                <option value='online'>Online</option>
+            </select>
+            Language:
+            <select name='language'class='input2'>
+                <option value='python'>Python</option>
+                <option value='mean'>IOS</option>
+            </select>
+            Comment (Optional):
+            <textarea name='comment'></textarea>
+            <input type='submit' value='Submit'>
+        </fieldset>
+    </form>
+   
+</body>
+</html>
